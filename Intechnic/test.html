@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+
+<htm>
+    
+    <head>
+        
+        <meta name="viewport" content="width=device-width">
+        <title> Test page  </title>
+        
+        
+        <style>
+            
+            .body-container{
+                background-image: url("img/trip1.jpg");
+                padding: 5px;
+                
+            }
+            
+            header{
+               background: #ED1C24;
+                width: 100%;
+                height:76px;                
+                position: fixed;
+                top:0;
+                left: 0;
+                z-index: 1;
+                border-bottom: 5px solid #000 ;
+                
+            }
+            
+            ul{
+                list-style: none;
+                position: absolute;
+                top: 10px;
+                right: 20px;
+             
+            }
+            
+            header::after, ul::after, .search-container::after{
+                content: "";
+                clear: both;
+                display: block;
+            }
+            
+            li{
+               
+                display: inline-block;
+                float: left;
+                padding: 10px;               
+            }
+            
+            
+            a{
+                
+                color:#fff;
+                text-decoration: none;
+                font-weight: bold;
+            }
+            
+            #header-logo{
+                margin: 20px;
+                float: left;
+                width: 100px;
+                height: 50px;
+                background: url("img/intechniclogo1.jpg") no-repeat center;
+                
+            }
+            
+            nav{
+                float:right;
+                padding: 20px;
+                font-family: sans-serif;
+            }
+            
+            #menu-icon{
+                    visibility: hidden;
+                    height: 0;
+            }
+            
+            .search-container{
+                display: block;
+                margin-top: 100px;                
+            }
+            
+            .search-container form{
+               width: 460px;
+               float:right;
+            }
+            
+            .search-container form::after{
+                content: "";
+                display: block;
+                clear: both;
+            }
+            
+            .search-container form input[type="text"]{
+                width: 320px;
+            }
+            
+            .search-container form input[type="submit"]{
+                width: 100px;
+                border: 1px;
+                height: 100%;
+                float: right;
+                background: #0077CC;
+                color: #fff;
+            }
+            
+            .search-container form input[type="text"], .search-container form input[type="submit"]{
+                height: 40px;          
+                font-size: 18px;
+                border-radius: 4px;
+            }
+            
+            
+            #show-gallary{
+                    width: 320px;
+                    height: 240px;
+                    background-image: url("img/category_creative.jpg");
+                    -webkit-animation-name: change-img;
+                    -webkit-animation-duration: 16s;
+                    animation-name: change-img;
+                    animation-duration: 16s;
+                    animation-iteration-count: infinite;
+                margin: auto;
+                   
+            }
+            
+            @-webkit-keyframes change-img {
+                0%   { background-image: url("img/category_creative.jpg");}
+                25%  { background-image: url("img/category_marketing.jpg");}
+                50%  { background-image: url("img/category_ux.jpg");}
+                100% { background-image: url("img/homelogo.jpg");}
+            }
+
+            @keyframes change-img {
+                0%   { background-image: url("img/category_creative.jpg");}
+                25%  { background-image: url("img/category_marketing.jpg");}
+                50%  { background-image: url("img/category_ux.jpg");}
+                100% { background-image: url("img/homelogo.jpg");}
+            }
+            
+            #content-holder{
+                margin-top: 20px;
+            }
+            #content-holder::after{
+                clear:both;
+                content: "";
+                display: block;
+            }
+            
+            section{
+               width: 60%;
+                background: #F1F1F1;
+                padding: 5px;       
+                float:left;
+            }
+            
+            aside{
+                width: 35%;
+                background: #F1F1F1;
+                padding: 5px; 
+                float: right;
+            }
+            
+            section h1, aside h1{
+                margin: 5px 0 5px 0;
+            }
+            
+            #newsletter{
+                
+            }
+            
+            #newsletter input[type="text"]{
+                
+                
+            }
+            
+            #newsletter input[type="submit"]{
+                 background: #0077CC;
+                color: #fff;
+                border:none;
+            
+            }
+            
+            #newsletter input[type="text"],
+            #newsletter  input[type="submit"]{
+                font-size: 18px;
+                border-radius: 4px;
+                display: block;
+                width: 80%;
+                margin: 3px;
+                height: 40px;
+                
+                
+            }
+            
+             footer{
+                    text-align: center;
+                    background: #000;
+                    color: #fff;
+                    height: 50px;
+                    font-size: 18px;
+                 border-radius: 4px;
+                    margin-top: 10px;
+                    
+                }
+            
+            footer p{
+                
+                position: relative;
+                top:30%;
+     
+            }
+            
+
+            @media only screen and (max-width:640px)
+            {
+                header{
+                    position: absolute;
+                }
+                
+                #menu-icon{
+                    display: inline;
+                     width: 32px;
+                    height: 32px;
+                    font-size: 30px;
+                    visibility: visible;
+                }
+                
+                nav ul, nav:active ul{
+                    display: none;
+                    position: absolute;
+                    padding: 20px;
+                    background: #c5c5c5;
+                    right: 10px;
+                    top: 65px;
+                    width: 35%;
+                    
+                }
+                
+                nav:hover ul{
+                    display: block;
+                }
+                
+                nav li{
+                    text-align: center;
+                    width: 100%;
+                    padding: 15px 0;
+                    margin: 0;
+                    
+                }
+                
+                 .search-container form{
+                   width: 100%;
+                   float:none;
+                    text-align: center;
+                }
+                
+                
+                .search-container form input[type="text"], .search-container form input[type="submit"]{
+                    width: 80%;
+                    display: inline;
+                    margin: auto;
+                    float:none;
+                   
+                }
+                
+                section{
+                    width: 80%;
+                    margin: auto;
+                    float: none;
+                
+                }
+                 #show-gallary{
+                    width: 80%;
+                    margin: auto;
+                    height: 150px;
+                }
+                
+                 aside{
+                    width: 80%;
+                    margin: auto;
+                    float: none;
+                    margin-top:  20px;
+                
+                }
+                
+               
+                
+                
+            }
+        </style>
+    
+    </head>
+    
+    
+    <body>
+    
+        <div class="body-container">
+            <header>
+                
+                <!-- LOGO -->
+                <a href="#" id="header-logo"></a>
+                
+                <!-- Navigation bar -->
+                <nav>
+                    <a href="#" id="menu-icon"> &#9776; </a>
+                    
+                    <ul>
+                        <li> <a href="index.html"> Home </a> </li>
+                        <li> <a href="user.html"> About </a> </li>
+                        <li> <a href="marketing.html"> Download </a> </li>
+                        <li> <a href="web.html"> Web </a> </li>
+                    </ul>
+                    
+                </nav>
+                
+                
+            </header>
+
+            <div class="search-container">
+                <form action="#">
+                    <input type="text" placeholder="Search.." name="search">
+                    <input type="submit" value="Search"></button>
+                </form>
+            </div>
+            
+            
+
+            <div id="content-holder">
+                <section>
+                    
+                    <h1> Image Gallary </h1> 
+                    
+                    <div id="show-gallary">
+                    </div>
+                    
+                    <p> Gallary discription goes here 
+                    
+                        Up branch to easily missed by do. Admiration considered acceptance too led one melancholy expression. Are will took form the nor true. Winding enjoyed minuter her letters evident use eat colonel. He attacks observe mr cottage inquiry am examine gravity. Are dear but near left was. Year kept on over so as this of. She steepest doubtful betrayed formerly him. Active one called uneasy our seeing see cousin tastes its. Ye am it formed indeed agreed relied piqued. 
+<br>
+Had denoting properly jointure you occasion directly raillery. In said to of poor full be post face snug. Introduced imprudence see say unpleasing devonshire acceptance son. Exeter longer wisdom gay nor design age. Am weather to entered norland no in showing service. Nor repeated speaking shy appetite. Excited it hastily an pasture it observe. Snug hand how dare here too. 
+
+                    </p>
+
+                </section>
+                
+                <aside>
+                    
+                    <h1> Newsletter Subscription </h1>
+                    
+                    <form id="newsletter">
+                        
+                        <input type="text" placeholder="email id ..">
+                        
+                        <input type="submit" value="Subscribe">
+                        
+                    </form>
+                
+                </aside>
+            </div>
+    
+            <footer>
+                <p> &copy;2018 - powered by TechLearner </p>
+            </footer>
+            
+            <script type="text/javascript">
+            </script>
+            
+        </div>
+    </body>
+</htm>

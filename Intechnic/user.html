@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        
+        <meta name="viewport" content="width=device-width">
+        
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        
+        <title> intechnic home </title>       
+        
+    </head>
+    
+    <body>
+        
+        <div class="logo">
+            
+            <img src="img/homelogo.jpg" class="homelogo">
+            
+             <span  onclick="opennavbar()">&#9776; Menu </span>
+
+        </div>
+        
+        <div class="body-container">
+            
+            <nav class="page-navigation">
+                <ul>
+                    <li><a href="index.html">Strategy</a></li>
+                    <li class="active"><a href="user.html">User Experience</a></li>
+                    <li><a href="web.html">Web Design</a></li>
+                    <li><a href="marketing.html">Marketing</a></li>
+                </ul>
+            </nav>
+            
+        <div id="rightnav" class="navigation-bar">
+            
+            <a href="javascript:void(0)" class="btnclose" onClick="closenavbar()"> &times;   </a>
+            <a href="#"> menu1 </a>
+            <a href="#"> menu2 </a>
+            <a href="#"> menu3 </a>
+            <a href="#"> menu4 </a>
+                    
+           
+        </div>
+            
+            <div class="page-title">
+                
+                <h1>The Marketing Blog</h1>
+                
+                <p>Everything busy marketers need to know about trends, tactics, planning, and execution of marketing strategy: social media, inbound and content marketing, SEO, copywriting, branding, email, analytics, and marketing KPIs.</p>
+
+
+            </div>
+
+            <footer> <p> &copy; 2018 - intechnic website </p>
+            </footer>
+        </div>
+        
+        <script type="text/javascript" src="script/jquery-3.3.1.min.js"></script>
+        
+        <script type="application/javascript" >
+            function opennavbar(){                document.getElementById("rightnav").style.width = "250px";                
+            } 
+            
+            function closenavbar(){                document.getElementById("rightnav").style.width = "0px";
+                
+            } 
+            
+        </script>
+        
+    </body>
+</html>
