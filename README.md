@@ -5,4 +5,3 @@ file is changed
 
 
 adding new changes
->>>>>>> feature-branch-name
